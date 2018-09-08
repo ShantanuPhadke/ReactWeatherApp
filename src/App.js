@@ -29,7 +29,7 @@ class App extends React.Component{
     //Need to convert the data we get back from the API into a readable format
     const data = await api_call.json();
     //Altering the state based on the information we got back from the API Call above
-    if (city && country && data == undefined){
+    if (city && country && data === undefined){
       console.log(data.sys.country);
       this.setState({
         temperature: data.main.temp,
