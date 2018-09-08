@@ -25,7 +25,7 @@ class App extends React.Component{
     //Using event object to get city, Country values from the target object
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`) //api_url goes into the fetch(...) function
+    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`) //api_url goes into the fetch(...) function
     //Need to convert the data we get back from the API into a readable format
     const data = await api_call.json();
     //Altering the state based on the information we got back from the API Call above
